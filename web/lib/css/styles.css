@@ -1,0 +1,156 @@
+
+.entete{
+    height: 100px;
+}
+.creer-compte{
+    height: 60px;
+    width: 120px;
+    margin-top: 10px;
+}
+.form-connect{
+    height: auto;
+    width: 500px;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom:  20px
+}
+.form-inscription{
+    height:auto;
+    width: 500px;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom:  20px;
+}
+.corp{
+    background-color: rgb(248,248,248);
+    height: auto;
+    min-height: 400px;   
+    position: absolute;
+    top:160px;
+    z-index: 100;
+}
+a{
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+.pannier{
+    width: 45px;
+    height: 45px;
+}
+form img {
+    height: 64px;
+    order: 1;
+}
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+form ol {
+    padding-left: 0;
+}
+form label:hover, form button:hover {
+    background-color: #2D5BA3;
+    color: white;
+}
+
+form label:active, form button:active {
+    background-color: #0D3F8F;
+    color: white;
+}
+.menu_gauche{
+    height: 500px;
+    width: 150px;
+    position: relative;
+    top:0px;
+    left: 0px;  
+}
+.contenu{
+    height: auto;
+    width: 1150px;   
+    position: relative; 
+    top:0px;
+    left:0px;
+    background-color: white;
+    padding-left:10px;
+}
+#div_slide{
+    position : relative;
+    float: left;
+    width: 501px;
+    height: 660px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.images_galerie{
+    height:550px;
+    width: 350px;
+    margin-right: 30px;
+    margin-top: 20px;   
+}
+.div-entete{
+    position : fixed;
+    top: 0px;
+    z-index: 1000;
+}
+.detail{
+    position: relative;
+    float: left;
+    height: auto;
+    width: 780px;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+.div-container-detail{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+.div-info-session{
+    height: 20px;
+}
+#info-session-user{
+    height: 20px;
+    display: inline-block;
+    background-color: rgb(74,255,74);
+}
+#deconnection{
+    height: 20px;
+    display: inline-block;
+    background-color: rgb(74,255,74);
+    margin-left: 10px;
+}
+#quantite,#prix,#type,#couleur,#genre,#taille,#date{
+    width: 150px;
+}
+.form_art{
+    display: inline-block;
+    float: left;
+    margin-right: 60px;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+/*form label, form button {
+  background-color: #7F9CCB;
+  border-radius: 5px;
+  border: 1px ridge black;
+}
+form li, div > p {
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  list-style-type: none;
+  border: 1px solid black;
+}*/
