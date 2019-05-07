@@ -1,8 +1,8 @@
 
 <div class="container-fluid">
-    <p class="text-center"><a href="index.php?page=connextion">Se connecter</a> | <a href="index.php?page=inscription">creer un compte</a></p>
+    <p class="text-center"><a href="index.php?page=connextionAdmin">Se connecter</a>
     <div class="container-fluid form-connect bg-white">
-        <form action="" method="POST"  class="needs-validation" novalidate>
+        <form action="index.php?page=authentificationAdmin" method="POST"  class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="email">Email address:</label>
                 <input type="email" class="form-control" id="email" name="email" required="required">
@@ -44,9 +44,9 @@
 })();
 </script>
 <?php
-if (file_exists('./admin/lib/php/authentification_connection.php')) {
-    include ('./admin/lib/php/authentification_connection.php');
-}
+/*if (file_exists('./admin/lib/php/authentificationAdmin.php')) {
+    include ('./admin/lib/php/authentificationAdmin.php');
+}*/
 
 
 

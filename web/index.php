@@ -65,7 +65,7 @@ if (file_exists('./admin/lib/php/cookie.php')) {
                     var b = document.createElement("a");
                     var node = document.createTextNode("admin")
                     b.appendChild(node);
-                    b.href = "./admin/admin.php?page=liste_articles";
+                    b.href = "index.php?page=connectionAdmin";
                     admin.appendChild(b);
                 </script>
             <?php }

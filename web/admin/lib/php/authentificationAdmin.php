@@ -1,6 +1,7 @@
 <?php
+
 try {
-    if ($_SERVER['REQUEST_METHOD'] == "POST"){
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (isset($_POST['se_connecter'])) {
             if (!empty($_POST['email'])) {
                 $email = htmlspecialchars($_POST['email']);
@@ -8,19 +9,15 @@ try {
             if (!empty($_POST['pwd'])) {
                 $pwd = htmlspecialchars($_POST['pwd']);
             }
-            $rester_connecter ="";
-            if (!empty($_POST['rester_connecter'])) {
-                $rester_connecter = htmlspecialchars($_POST['rester_connecter']);
+            $query = "select * from administrateur where mail = :email and passeword = :pwd";
+            $resultset = $cnx->prepare($query);
+            $resultset->bindParam(':email', $email, PDO::PARAM_STR);
+            $resultset->bindParam(':pwd', $pwd, PDO::PARAM_STR);
+            $resultset->execute();
+            $data = $resultset->fetchAll();
+            if (count($data) == 1) {
+                header('location: http://localhost:8080/projet_web_2019/web/admin/admin.php?page=liste_articles');
             }
-            $user_dao = new Utilisateur_dao($cnx);
-            $user_dao->authentification_user($email,$pwd,$rester_connecter);
-            ?>
-            <?php
-            /* $data = $resultset->fetchAll();
-
-              for ($i = 0; $i < count($d); $i++) {
-              print "<br />" . utf8_decode($d[$i]['champ']);
-              } */
         }
     }
 } catch (PDOException $e) {

@@ -92,11 +92,7 @@ class Utilisateur_dao {
                 // echo "vous etes identifier" . $_SESSION['nom'] . " " . $_SESSION['prenom'];
             }
         }
-        /* $data = $resultset->fetchAll();
-
-          for ($i = 0; $i < count($d); $i++) {
-          print "<br />" . utf8_decode($d[$i]['champ']);
-          } */
+       
     }
 
     public function liste_utilisteur() {
