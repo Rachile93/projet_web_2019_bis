@@ -110,8 +110,8 @@ class Article_dao {
                     $nom_image = $nom[count($nom) - 1];
                     unlink($nom_image);
                 }
-                echo "suppression effectuer.<br />";
-                header('Location: http://localhost:8080/projet_web_2019/web/index.php?page=liste_articles');
+                echo "suppression effectuer.<br />";            
+                header('Location: http://localhost:8080/projet_web_2019/web/admin/lib/admin.php?page=liste_articles');
             } else {
                 echo "echec de suppression.<br />";
             }

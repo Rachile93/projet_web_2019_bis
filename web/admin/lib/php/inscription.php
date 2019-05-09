@@ -1,5 +1,10 @@
+<script>
+    $(document).ready(function () {
+        $(".r").css("font-weight", "bold");
+    });
+</script>
 <div class="container-fluid">
-    <p class="text-center"><a href="index.php?page=connextion">Se connecter</a> | <a href="index.php?page=inscription">creer un compte</a></p>
+    <p class="text-center"><a href="index.php?page=connextion">Se connecter</a> | <a href="index.php?page=inscription" class="r">creer un compte</a></p>
     <div class="container-fluid form-inscription bg-white">
         <form action="index.php?page=donnee_form_inscription" method="POST" class="needs-validation" novalidate>
             <label class="radio-inline"><input type="radio" name="civilite" value="Madame" checked>Madame</label>
@@ -64,7 +69,8 @@
         }, false);
     })();
 </script>
-<?php/*
-if (file_exists('./admin/lib/php/donnee_form_inscription.php')) {
-    include ('./admin/lib/php/donnee_form_inscription.php');
-}*/
+<?php
+/*
+  if (file_exists('./admin/lib/php/donnee_form_inscription.php')) {
+  include ('./admin/lib/php/donnee_form_inscription.php');
+  } */

@@ -1,6 +1,10 @@
-
+<script>
+$(document).ready(function(){
+  $(".m").css("font-weight","bold");
+});
+</script>
 <div class="container-fluid">
-    <p class="text-center"><a href="index.php?page=connextion">Se connecter</a> | <a href="index.php?page=inscription">creer un compte</a></p>
+    <p class="text-center"><a href="index.php?page=connextion" class="m">Se connecter</a> | <a href="index.php?page=inscription">creer un compte</a></p>
     <div class="container-fluid form-connect bg-white">
         <form action="index.php?page=authentification_connection" method="POST"  class="needs-validation" novalidate>
             <div class="form-group">

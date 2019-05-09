@@ -20,7 +20,9 @@ session_start();
         <link href="../lib/css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+
         <div class="container-fluid bg-white div-entete">
+            
             <div class="row container-fluid align-items-center justify-content-end entete">
                 <form class="form-inline" method="POST" action="admin.php?page=recherche_user">
                     <input type="text" class="form-control" onkeyup="showHint(this.value)" name="text_search" id="search">
@@ -28,7 +30,7 @@ session_start();
                         <span class="glyphicon glyphicon-search"></span> Search
                     </button>
                 </form> <?php
-                if (file_exists('./lib/php/script_ajax.php')){
+                if (file_exists('./lib/php/script_ajax.php')) {
                     include ('./lib/php/script_ajax.php');
                 }
                 ?>
@@ -67,9 +69,6 @@ session_start();
                 <?php
             }
             ?>  
-        </div>
-        <div class="jumbotron text-center" style="margin-bottom:0">
-            <p>Footer</p>
         </div>
     </body>
 </html>

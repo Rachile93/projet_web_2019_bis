@@ -89,10 +89,9 @@ class Utilisateur_dao {
                 </script>
                 <?php
                 header('location: http://localhost:8080/projet_web_2019/web/index.php?page=accueil');
-                // echo "vous etes identifier" . $_SESSION['nom'] . " " . $_SESSION['prenom'];
+// echo "vous etes identifier" . $_SESSION['nom'] . " " . $_SESSION['prenom'];
             }
         }
-       
     }
 
     public function liste_utilisteur() {
@@ -137,9 +136,9 @@ class Utilisateur_dao {
                 $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
                 $res = $resultset->execute();
                 if ($res) {
-                    echo "suppression effectuer.<br />";
+                    echo "suppression effectuer";               
                 } else {
-                    echo "echec de suppression.<br />";
+                    echo "echec de suppression";
                 }
             } else {
                 $query3 = "delete from utilisateur where id_user=:id_user";
@@ -159,7 +158,6 @@ class Utilisateur_dao {
             $res = $resultset->execute();
             if ($res) {
                 echo "suppression effectuer.<br />";
-                echo $id_user;
             } else {
                 echo "echec de suppression.<br />";
             }

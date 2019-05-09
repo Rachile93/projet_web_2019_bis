@@ -1,6 +1,10 @@
-
+<script>
+    $(document).ready(function () {
+        $(".m").css("font-weight", "bold");
+    });
+</script>
 <div class="container-fluid">
-    <p class="text-center"><a href="index.php?page=connextionAdmin">Se connecter</a>
+    <p class="text-center"><a href="index.php?page=connextionAdmin" class="m">Se connecter</a>
     <div class="container-fluid form-connect bg-white">
         <form action="index.php?page=authentificationAdmin" method="POST"  class="needs-validation" novalidate>
             <div class="form-group">
@@ -25,23 +29,23 @@
 </div>
 <script>
 // Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
 </script>
 <?php
 /*if (file_exists('./admin/lib/php/authentificationAdmin.php')) {
