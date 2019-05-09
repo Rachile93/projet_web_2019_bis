@@ -1,3 +1,7 @@
+<?php 
+    //ce fichier represente le formulaire de connection pour les utilisateurs
+?>
+
 <script>
 $(document).ready(function(){
   $(".m").css("font-weight","bold");

@@ -1,4 +1,8 @@
 <?php
+
+//ce fichier permet de verifier l'existence d'un cookie et le conserver le cas 
+//echeant pendant un certain temps
+
 if (isset($_COOKIE['auth']) && !isset($_SESSION['id_user'])) {
     echo 'ok1';
     $auth = $_COOKIE['auth'];

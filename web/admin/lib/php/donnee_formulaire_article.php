@@ -1,6 +1,8 @@
 
 <?php
 
+//permet de recuperer les données saisie dans le formulaire de creation de compte 
+//et de les envoyés en parametre via la methode AJOUT_ARTICLE de la classe ARTICLE_DAO
 try {
     $nom = "";
     $prix = 0;

@@ -1,5 +1,6 @@
 <?php
-
+//permet de recuperer les données saisie dans le formulaire de creation de compte 
+//et de les envoyés en parametre via la methode CREATE_USER de la classe UTILISATEUR_DAO
 try {
     $nom = "";
     $prenom = "";
@@ -36,9 +37,11 @@ try {
 
             if (strcmp($pwd,$pwd_confirm) == 0) {
             //  $pwd = password_hash($pwd,PASSWORD_BCRYPT);
+                //creation d'une instance de la classe UTILIDATEUR_METIER 
                 $user = new Utilesateur_metier($nom, $prenom, $date_naissance, $email, $pwd, $civilite);
+              //creation d'une instance UTILISATEUR_DAO
                 $user_dao = new Utilisateur_dao($cnx);
-                $user_dao->create_user($user);
+                $user_dao->create_user($user);//appelle de la methode create user
             } else {
                 echo 'les deux mots de passe ne son pas identique';
             }

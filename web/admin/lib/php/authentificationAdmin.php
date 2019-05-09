@@ -1,4 +1,6 @@
 <?php
+//ce fichier permet de recuperer les données saisie dans l'espace reserver a la connection
+//puis de les envoie en parametre afin de verifier que les données existe dans la table ADMINISTRATEUR de notre base de donne
 
 try {
     if ($_SERVER['REQUEST_METHOD'] == "POST") {

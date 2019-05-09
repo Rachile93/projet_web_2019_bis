@@ -1,3 +1,5 @@
+<?php // cefichier est le fomulaire qui permet a l'administrateur d'encoder de nouveau articles 
+?>
 <div class="container-fluid">
     <div class="container-fluid form-inscription bg-white">
         <form action="" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">            

@@ -1,4 +1,7 @@
 <?php
+//ce fichier permet de recuperer les données saisie dans l'espace reserver a la connection
+//puis de les envoie en parametre de lors de l'appelle de la methode AUTHENTIFICATION_USER() dans la 
+//classe USER-DAO afin de verifier que les données existe dans la table UTILISATEUR de notre base de donne
 try {
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
         if (isset($_POST['se_connecter'])) {

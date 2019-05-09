@@ -1,5 +1,5 @@
 <?php
-
+//ficheir qui permet de creer un PDF et presenter les donneés sous forme d'un tableau
 class PDF extends FPDF {
 
 // Chargement des données

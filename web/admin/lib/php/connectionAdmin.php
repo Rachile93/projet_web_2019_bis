@@ -1,3 +1,6 @@
+<?php 
+    //ce fichier represente le formulaire de connection pour l'administrateur
+?>
 <script>
     $(document).ready(function () {
         $(".m").css("font-weight", "bold");

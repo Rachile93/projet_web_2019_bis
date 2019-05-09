@@ -1,11 +1,16 @@
 <?php
+//ce fichier permet de supprimer un utilisateur dans la table utilisateur de notre base de donnee
 
-$user_dao = new Utilisateur_dao($cnx);
-$user_dao->delete_user(intval($_GET['id_user']));
+$user_dao = new Utilisateur_dao($cnx);//ici on creer une instance de l'objet utilisateur DAO
+$user_dao->delete_user(intval($_GET['id_user']));//ici on execute la methode  delete_user en lui passant en parametre  l'identifiant 
+//de l'utilisateur a supprimer .il aura pour but de rechercher l'utilisateur qui porte cette identifiant et de le supprimer 
+//
         
 try {
-    $user_dao = new Utilisateur_dao($cnx);
-    $data = $user_dao->liste_utilisteur();
+  //  $user_dao = new Utilisateur_dao($cnx);
+    $data = $user_dao->liste_utilisteur();//après avoir supprimer un utilisateur on relit la table
+    // utilisateur (methode liste_utilisateur) qui retour un tableau qui doit etre exploiter pour afficher tout les utilisateurs
+    //affiche de resultat dans un tabeau
 
     echo '<div class="container-fluid">';
     echo '<table class = "table  table-bordered" class="colonne_tableau">';
@@ -41,6 +46,7 @@ try {
 } catch (PDOException $e) {
     echo "<br>" . $e->getMessage();
 }
+
 ?>
 <script>
     function supUser(id_user) {

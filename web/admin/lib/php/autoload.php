@@ -1,5 +1,5 @@
 <?php
-
+//ce fichier a pour but de charger toute les classes qui existe dans notre projet au debut lancement de l'index.php
 function autoload($nom_classe) {
     if (file_exists('./lib/php/classe/' . $nom_classe . '.class.php')) {
         require './lib/php/classe/' . $nom_classe . '.class.php';
