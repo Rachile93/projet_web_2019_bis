@@ -20,9 +20,7 @@ session_start();
         <link href="../lib/css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-
-        <div class="container-fluid bg-white div-entete">
-            
+        <div class="container-fluid bg-white div-entete" id="div-entete">        
             <div class="row container-fluid align-items-center justify-content-end entete">
                 <form class="form-inline" method="POST" action="admin.php?page=recherche_user">
                     <input type="text" class="form-control" onkeyup="showHint(this.value)" name="text_search" id="search">
@@ -69,6 +67,6 @@ session_start();
                 <?php
             }
             ?>  
-        </div>
+        </div>       
     </body>
 </html>

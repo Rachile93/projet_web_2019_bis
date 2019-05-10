@@ -7,7 +7,7 @@ $user_dao->delete_user(intval($_GET['id_user']));//ici on execute la methode  de
 //
         
 try {
-  //  $user_dao = new Utilisateur_dao($cnx);
+    $user_dao = new Utilisateur_dao($cnx);
     $data = $user_dao->liste_utilisteur();//après avoir supprimer un utilisateur on relit la table
     // utilisateur (methode liste_utilisateur) qui retour un tableau qui doit etre exploiter pour afficher tout les utilisateurs
     //affiche de resultat dans un tabeau
