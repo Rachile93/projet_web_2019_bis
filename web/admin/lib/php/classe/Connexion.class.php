@@ -1,5 +1,4 @@
 <?php
-
 class Connexion {
 
     private static $_instance = null;
@@ -10,7 +9,7 @@ class Connexion {
             try {
                 self::$_instance = new PDO($dsn, $user, $pass);
                 self::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
-               //alert("connexion etablie");
+                ?><script> notif("connection etablie"); </script><?php
             } catch (PDOException $e) {
                 print "Erreur de connexion : " . $e->getMessage() . " " . $e->getLine();
                 //print "pass : ".$pass. " user = ".$user;
@@ -18,7 +17,6 @@ class Connexion {
         }
         return self::$_instance;
     }
-
 }
 ?>
 

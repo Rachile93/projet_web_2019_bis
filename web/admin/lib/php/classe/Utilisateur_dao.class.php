@@ -37,18 +37,7 @@ class Utilisateur_dao {
             $_SESSION['id_user'] = $this->cnx->lastInsertId("id_user_seq");
             ?>
             <script>
-                var element = document.getElementById("info-session-user");
-                element.innerHTML = " <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?> ";
-                var deconnection = document.getElementById("deconnection");
-                var a = document.createElement("a");
-                var node = document.createTextNode("deconnection");
-                a.appendChild(node);
-                a.href = "index.php?page=deconnection";
-                deconnection.appendChild(a);
-                var admin = document.getElementById("admin");
-                admin.innerHTML = "";
-                var div_entete = document.getElementById("entete");
-                div_entete.removeChild(document.getElementById("creer_compte"));
+                creation_session_user("<?php echo $_SESSION['nom']; ?>", "<?php echo $_SESSION['prenom']; ?>");
             </script><?php
             header('location: http://localhost:8080/projet_web_2019/web/index.php?page=accueil');
             echo "Les données ont bien été insérées.<br />";
@@ -74,18 +63,7 @@ class Utilisateur_dao {
                 }
                 ?>
                 <script>
-                    var element = document.getElementById("info-session-user");
-                    element.innerHTML = " <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?> ";
-                    var deconnection = document.getElementById("deconnection");
-                    var a = document.createElement("a");
-                    var node = document.createTextNode("deconnection");
-                    a.appendChild(node);
-                    a.href = "index.php?page=deconnection";
-                    deconnection.appendChild(a);
-                    var admin = document.getElementById("admin");
-                    admin.innerHTML = "";
-                    var div_entete = document.getElementById("entete");
-                    div_entete.removeChild(document.getElementById("creer_compte"));
+                    creation_session_user("<?php echo $_SESSION['nom']; ?>", "<?php echo $_SESSION['prenom']; ?>");
                 </script>
                 <?php
                 header('location: http://localhost:8080/projet_web_2019/web/index.php?page=accueil');
@@ -136,9 +114,9 @@ class Utilisateur_dao {
                 $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
                 $res = $resultset->execute();
                 if ($res) {
-                   // echo "suppression effectuer";               
+                    // echo "suppression effectuer";               
                 } else {
-                   // echo "echec de suppression";
+                    // echo "echec de suppression";
                 }
             } else {
                 $query3 = "delete from utilisateur where id_user=:id_user";
@@ -146,9 +124,15 @@ class Utilisateur_dao {
                 $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
                 $res = $resultset->execute();
                 if ($res) {
-                   // echo "suppression effectuer.<br />";
+                    // echo "suppression effectuer.<br />";
+                    ?>
+                    <script> notif("suppression effectuer");</script>
+                    <?php
                 } else {
-                   // echo "echec de suppression.<br />";
+                    // echo "echec de suppression.<br />";
+                    ?>
+                    <script> notif("echec suppression");</script>
+                    <?php
                 }
             }
         } else {
@@ -156,10 +140,16 @@ class Utilisateur_dao {
             $resultset = $this->cnx->prepare($query4);
             $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
             $res = $resultset->execute();
-            if ($res){
-               // echo "suppression effectuer.<br />";
-            } else{
-               // echo "echec de suppression.<br />";
+            if ($res) {
+                // echo "suppression effectuer.<br />";
+                ?>
+                <script> notif("suppression effectuer");</script>
+                <?php
+            } else {
+                // echo "echec de suppression.<br />";
+                ?>
+                <script> notif("echec suppression");</script>
+                <?php
             }
         }
     }

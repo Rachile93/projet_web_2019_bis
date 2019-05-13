@@ -3,17 +3,15 @@
 <?php
 $art = new Article_dao($cnx);
 $pannier = new Pannier_dao($cnx);
+$img = new Images($cnx);
 try {
     ?>
     <div class="row div-container-detail">
         <div class ="div-img-detail" id="div_slide">
             <?php
             //     $_SESSION['id_article'] = $_SESSION['id_article'];
-            $query = "select * from images where id_article=:id_article";
-            $resultset = $cnx->prepare($query);
-            $resultset->bindParam(':id_article', $_GET['id_article'], PDO::PARAM_INT);
-            $resultset->execute();
-            $data_images = $resultset->fetchAll();
+
+            $data_images = $img->selection_images($_GET['id_article']);
             for ($a = 0; $a < count($data_images); $a++) {
                 ?>
                 <img class="mySlides" src="<?php echo '.\admin' . $data_images[$a]['nom_image'] ?>"  alt="Lights" style="width:100%">     
@@ -46,16 +44,11 @@ try {
                 <div class="form-group">
                     <label for="quantite">Quantite:</label>
                     <input type="number" class="form-control" id="quantite" name="quantite">
-                </div>
-                <?php
-                //echo '<h5> tel : ' . $data[0]['tel'] . '</h5><br\>';
-                // echo '<h5> adress : ' . $data[0]['adress'] . ' ' . $data[0]['numero'] . ' , ' . $data[0]['code_postal'] . '  ' . $data[0]['ville'] . '</h5><br\>';
-                // echo '<h5> pays : ' . $data[0]['pays'] . '</h5><br\>';
-                //  echo '<h5> prix : ' . $data[0]['prix'] . '</h5><br\>';
-                //  $_SESSION['nbre_de_chambre']=$data[0]['nbre_de_chambre'];
-                ?>
+                </div>             
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" name="ajouter">Ajouter au pannier</button>
+                </div>
+                <div class="notification">                
                 </div>
             </form>
         </div>      
@@ -80,9 +73,18 @@ try {
                 if (count($data_5) == 1 && $data_5[0]['quantite'] >= $quantite) {
                     $res_update = $art->update_article($data_5[0]['quantite'] - $quantite, $_GET['id_article']);
                     if ($res_update == 1) {
-                        echo 'modification effectuer';
+                        //  echo 'modification effectuer';
+                        ?>
+                        <script>
+                            notif("<p>modification effectuer</p>")
+                        </script>
+                        <?php
                     } else {
                         echo ' echec modification';
+                        ?>
+                        <script>
+                            notif("<p>modification effectuer</p>")
+                        </script><?php
                     }
 
                     $data_0 = $pannier->recherche_user($id_user);
@@ -96,28 +98,55 @@ try {
                             $res2 = $pannier->ajouter_a_la_table_composer($data[0]['id_pannier'], $_GET['id_article'], $quantite);
 
                             if ($res2) {
-                                echo "Les données ont bien été insérées.<br />" . $quantite;
+                                // echo "Les données ont bien été insérées.<br />" . $quantite;
+                                ?>
+                                <script>
+                                    notif("<p>Les données ont bien été insérées</p>")
+                                </script><?php
                             } else {
-                                echo "L'insertion des données a échoué.<br />" . $quantite;
+                                // echo "L'insertion des données a échoué.<br />" . $quantite;
+                                ?>
+                                <script>
+                                    notif("<p>L'insertion des données a échoué.</p>")
+                                </script><?php
                             }
                         } else {
-                            echo "L'insertion des données a échoué.<br />" . $quantite;
+                            //echo "L'insertion des données a échoué.<br />" . $quantite;
+                            ?>
+                            <script>
+                                notif("<p>L'insertion des données a échoué.</p>")
+                            </script><?php
                         }
                     } else {
-
                         $data = $pannier->recherche_user($id_user);
                         $res2 = $pannier->ajouter_a_la_table_composer($data[0]['id_pannier'], $_GET['id_article'], $quantite);
                         if ($res2) {
-                            echo "Les données ont bien été insérées.<br />" . $quantite;
+                            // echo "Les données ont bien été insérées.<br />" . $quantite;
+                            ?>
+                            <script>
+                                notif("<p>Les données ont bien été insérées</p>")
+                            </script><?php
                         } else {
-                            echo "L'insertion des données a échoué.<br />" . $quantite;
+                            //   echo "L'insertion des données a échoué.<br />" . $quantite;
+                            ?>
+                            <script>
+                                notif("<p>L'insertion des données a échoué.</p>")
+                            </script><?php
                         }
                     }
                 } else {
-                    echo 'quantite saisie non disponible';
+                    //  echo 'quantite saisie non disponible';
+                    ?>
+                    <script>
+                        notif("<p>quantite saisie non disponible.</p>")
+                    </script><?php
                 }
             } else {
-                echo 'veiller vous connecter a votre session';
+           //     echo 'veiller vous connecter a votre session';
+                ?>
+                <script>
+                    notif("<p>veiller vous connecter a votre session</p>")
+                </script><?php
             }
         }
     }

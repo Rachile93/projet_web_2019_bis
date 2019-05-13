@@ -1,7 +1,6 @@
 
 <div class="container-fluid bg-white  div-entete" id="div-entete">
-
-    <div class="container-fluid row align-items-center justify-content-end  div-info-session">
+    <div class="container-fluid row align-items-center justify-content-end  div-info-session">     
         <p id="info-session-user"></p>
         <p id="deconnection"></p>
         <p id="admin"></p>               

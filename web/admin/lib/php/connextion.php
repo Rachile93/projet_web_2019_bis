@@ -25,6 +25,8 @@
             </div>
             <button type="submit" class="btn btn-default" name="se_connecter">Se connecter</button>
         </form>
+        <div class="notification">          
+        </div>
         <p>Vous avez oublié votre mot de passe ? <a href="#">Réinitialisez le</a></p>
     </div>
 </div>

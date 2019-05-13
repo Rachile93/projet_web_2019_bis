@@ -9,6 +9,11 @@ function mise_en_gras_du_texte(str) {
         $(str).css("font-weight", "bold");
     });
 }
+function notif(str) {
+    $(document).ready(function () {      
+        $('.notification').append(str); 
+    });
+}
 function creation_Link_admin() {
     $(document).ready(function () {
         $('#admin').append("<a>admin</a>");
@@ -43,8 +48,5 @@ function test_validation() {
             });
         }, false);
     })();
-}
-function up_load_image(){
-    
 }
 
