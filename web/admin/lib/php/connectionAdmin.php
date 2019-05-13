@@ -1,10 +1,9 @@
-<?php 
-    //ce fichier represente le formulaire de connection pour l'administrateur
+<?php
+
+//ce fichier represente le formulaire de connection pour l'administrateur
 ?>
 <script>
-    $(document).ready(function () {
-        $(".m").css("font-weight", "bold");
-    });
+    mise_en_gras_du_texte(".m");
 </script>
 <div class="container-fluid">
     <p class="text-center"><a href="index.php?page=connextionAdmin" class="m">Se connecter</a>
@@ -31,25 +30,9 @@
     </div>
 </div>
 <script>
-// Disable form submissions if there are invalid fields
-    (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-            // Get the forms we want to add validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+    test_validation();
 </script>
+
 <?php
 /*if (file_exists('./admin/lib/php/authentificationAdmin.php')) {
     include ('./admin/lib/php/authentificationAdmin.php');

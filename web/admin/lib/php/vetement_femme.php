@@ -1,8 +1,4 @@
-<script>
-    $(document).ready(function () {
-        $(".femme").css("background-color","rgb(238, 238, 238)");
-    });
-</script>
+<script>jqCss(".femme")</script>
 <?php
 $liste = new Article_dao($cnx);
 $data = $liste->liste_vetement($_GET['genre']);

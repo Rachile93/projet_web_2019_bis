@@ -18,7 +18,7 @@ try {
             $resultset->execute();
             $data = $resultset->fetchAll();
             if (count($data) == 1) {
-                header('location: http://localhost:8080/projet_web_2019/web/admin/admin.php?page=liste_articles');
+                header('location: http://localhost:8080/projet_web_2019/web/admin/index.php?page=liste_articles');
             }
         }
     }

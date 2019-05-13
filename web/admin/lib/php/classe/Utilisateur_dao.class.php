@@ -136,9 +136,9 @@ class Utilisateur_dao {
                 $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
                 $res = $resultset->execute();
                 if ($res) {
-                    echo "suppression effectuer";               
+                   // echo "suppression effectuer";               
                 } else {
-                    echo "echec de suppression";
+                   // echo "echec de suppression";
                 }
             } else {
                 $query3 = "delete from utilisateur where id_user=:id_user";
@@ -146,9 +146,9 @@ class Utilisateur_dao {
                 $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
                 $res = $resultset->execute();
                 if ($res) {
-                    echo "suppression effectuer.<br />";
+                   // echo "suppression effectuer.<br />";
                 } else {
-                    echo "echec de suppression.<br />";
+                   // echo "echec de suppression.<br />";
                 }
             }
         } else {
@@ -156,10 +156,10 @@ class Utilisateur_dao {
             $resultset = $this->cnx->prepare($query4);
             $resultset->bindParam(':id_user', $id_user, PDO::PARAM_INT);
             $res = $resultset->execute();
-            if ($res) {
-                echo "suppression effectuer.<br />";
-            } else {
-                echo "echec de suppression.<br />";
+            if ($res){
+               // echo "suppression effectuer.<br />";
+            } else{
+               // echo "echec de suppression.<br />";
             }
         }
     }

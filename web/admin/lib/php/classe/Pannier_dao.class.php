@@ -46,14 +46,23 @@ class Pannier_dao {
         return $res;
     }
 
+    public function update_pannier($id_user, $id_article, $quantite) {
+            $query = "UPDATE composer,pannier SET quantite=:quantite WHERE id_article=:id_article"
+                    . "and ";
+            $resultset = $this->cnx->prepare($query);
+            $resultset->bindParam(':quantite', $quantite, PDO::PARAM_INT);
+            $resultset->bindParam(':id_article', $id_article, PDO::PARAM_INT);
+            $res = $resultset->execute();
+            return $res;
+    }
+
     public function suppression_article($id_article) {
         $query = "delete from composer where id_article=:id_article";
         $resultset = $this->cnx->prepare($query);
         $resultset->bindParam(':id_article', $id_article, PDO::PARAM_INT);
         $res = $resultset->execute();
         if ($res) {
-           
-            echo "suppression effectuer.<br />";
+            // echo "suppression effectuer.<br />";
             header('Location: http://localhost:8080/projet_web_2019/web/index.php?page=pannier');
         } else {
             echo "echec de suppression.<br />";

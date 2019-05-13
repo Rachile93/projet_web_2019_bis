@@ -15,63 +15,21 @@ if (file_exists('./admin/lib/php/cookie.php')) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="lib/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="./admin/lib/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
-        <link href="lib/css/styles.css" rel="stylesheet" type="text/css"/>
+        <script src="./admin/lib/jquery/monJquery.js"></script>
+        <script src="./admin/lib/php/ajax/ajax.js"></script>
+        <link href=".\admin\lib\css\styles.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>     
-        <div class="container-fluid bg-white  div-entete" id="div-entete">
-            
-            <div class="container-fluid row align-items-center justify-content-end  div-info-session">
-                <p id="info-session-user"></p>
-                <p id="deconnection"></p>
-                <p id="admin"></p>               
-            </div>         
-            <div class="row container-fluid align-items-center justify-content-end entete" id="entete">
-                <a href="index.php?page=connextion" id="creer_compte"> <p class="text-center creer-compte"><img src="admin/images/image_user.png" alt="Lights" class="pannier"><br/>se connecter/<br/>creer un compte</p></a>
-                <a href="index.php?page=pannier"> <p class="text-center creer-compte"><img src="admin/images/images_pannier.jpg" alt="Lights" class="pannier"><br/>Pannier</p></a>
-            </div>
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item accueil">
-                    <a class="nav-link list_nav_bar " href="index.php?page=accueil">Accueil</a>
-                </li>
-                <li class="nav-item femme">
-                    <a class="nav-link list_nav_bar " href="index.php?page=vetement_femme&genre=femme">FEMME</a>
-                </li>
-                <li class="nav-item homme">
-                    <a class="nav-link list_nav_bar " href="index.php?page=vetement_homme&genre=homme">HOMME</a>
-                </li>
-            </ul> 
-            <?php if (isset($_SESSION['nom']) && isset($_SESSION['prenom'])) { ?>
-                <script>
-                    var element = document.getElementById("info-session-user");
-                    element.innerHTML = " <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?> ";
-                    var deconnection = document.getElementById("deconnection");
-                    var a = document.createElement("a");
-                    var node = document.createTextNode("deconnection")
-                    a.appendChild(node);
-                    a.href = "index.php?page=deconnection";
-                    deconnection.appendChild(a);
-                    var div_entete = document.getElementById("entete");
-                    div_entete.removeChild(document.getElementById("creer_compte"));
-                </script>
-            <?php } else {
-                ?>
-                <script>
-                    var admin = document.getElementById("admin");
-                    var b = document.createElement("a");
-                    var node = document.createTextNode("admin")
-                    b.appendChild(node);
-                    b.href = "index.php?page=connectionAdmin";
-                    admin.appendChild(b);
-                </script>
-            <?php }
-            ?>
-        </div>
+    <body><?php
+        if (file_exists('./admin/pages/headerPublic.php')) {
+            require './admin/pages/headerPublic.php';
+        }
+        ?>
         <div class="container-fluid row  align-items-center corp">
             <?php
             if (!isset($_SESSION['page'])) {

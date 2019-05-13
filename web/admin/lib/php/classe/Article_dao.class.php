@@ -37,9 +37,10 @@ class Article_dao {
 
         $res = $stmt->execute();
         if ($res) {
-            echo "Les données ont bien été insérées.<br />";
+         //   alert("Les données ont bien été insérées");
         } else {
-            echo "L'insertion des données a échoué.<br />";
+           // echo "L'insertion des données a échoué.<br />";
+          // alert("L'insertion des données a échoué");
         }
     }
 
@@ -111,12 +112,12 @@ class Article_dao {
                     unlink($nom_image);
                 }
                 echo "suppression effectuer.<br />";            
-                header('Location: http://localhost:8080/projet_web_2019/web/admin/lib/admin.php?page=liste_articles');
+                header('Location: http://localhost:8080/projet_web_2019/web/admin/lib/index.php?page=liste_articles');
             } else {
-                echo "echec de suppression.<br />";
+               // alert("echec de suppression");
             }
         } else {
-            echo "echec de suppression.<br />";
+           // alert("echec de suppression");
         }
     }
 

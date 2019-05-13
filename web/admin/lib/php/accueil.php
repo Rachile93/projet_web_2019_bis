@@ -1,5 +1,1 @@
-<script>
-    $(document).ready(function () {
-        $(".accueil").css("background-color","rgb(238, 238, 238)");
-    });
-</script>
+<script>jqCss(".accueil")</script>

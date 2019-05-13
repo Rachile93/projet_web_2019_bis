@@ -9,7 +9,8 @@ class Connexion {
         if (!self::$_instance) {
             try {
                 self::$_instance = new PDO($dsn, $user, $pass);
-                self::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);                           
+                self::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+               //alert("connexion etablie");
             } catch (PDOException $e) {
                 print "Erreur de connexion : " . $e->getMessage() . " " . $e->getLine();
                 //print "pass : ".$pass. " user = ".$user;

@@ -33,7 +33,7 @@ try {
                         <td class="colonne_tableau text-center"><?php echo $data[$i]['type_article'] ?></td>
                         <td class="colonne_tableau text-center"><?php echo $data[$i]['genre'] ?></td>
                         <td class="colonne_tableau text-center"><?php echo $data[$i]['taille'] ?></td>
-                        <td class="colonne_tableau  text-center"><a href="admin.php?page=supprimer_article&id_art=<?php echo $data[$i]['id_article'] ?>"><span class="glyphicon glyphicon-trash"></a></td>                   
+                        <td class="colonne_tableau  text-center"><a href="index.php?page=supprimer_article&id_art=<?php echo $data[$i]['id_article'] ?>"><span class="glyphicon glyphicon-trash"></a></td>                   
                     </tr>
                 <?php } ?>
             </tbody>

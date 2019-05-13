@@ -37,7 +37,7 @@ try {
             echo '<td class="colonne_tableau ">' . $data[$i]['email'] . '</td>';
             echo '<td class="colonne_tableau ">' . $data[$i]['password'] . '</td>';
             echo '<td class="colonne_tableau text-center">' . $data[$i]['civilite'] . '</td>';
-            echo '<td class="colonne_tableau  text-center"><a href="admin.php?page=supprimer_utilisateur&id_user=' . $data[$i]['id_user'] . '"><span class="glyphicon glyphicon-trash"></a></td>';
+            echo '<td class="colonne_tableau  text-center"><a href="index.php?page=supprimer_utilisateur&id_user=' . $data[$i]['id_user'] . '"><span class="glyphicon glyphicon-trash"></a></td>';
             echo '</tr>';
         }
     }

@@ -30,12 +30,13 @@ try {
                             $commandes = $data[$i]['id_article'] . ";" . $article[0]['nom_article'] . ";" . $article[0]['prix'] . ";" . $data[$i]['quantite'] . ";" . $total . "\n";
 
                             fwrite($mesCommandes, $commandes);
+                            
                             ?>
                             <tr>
                                 <td class="colonne_tableau "><?php echo $data[$i]['id_article'] ?></td>
                                 <td class="colonne_tableau "><?php echo $article[0]['nom_article'] ?></td>
                                 <td class="colonne_tableau "><?php echo $article[0]['prix'] . " &euro;" ?></td>
-                                <td class="colonne_tableau "><?php echo $data[$i]['quantite'] ?></td> 
+                                <td class="colonne_tableau" contenteditable="true" onchange="update_quantite_pannier(this.value,<?php echo $_SESSION["id_user"] ?>,<?php echo $data[$i]['id_article'] ?>)"><?php echo $data[$i]['quantite']?></td> 
                                 <td class="colonne_tableau "><?php echo $article[0]['prix'] * $data[$i]['quantite'] . ' &euro;' ?></td>
                                 <td class="colonne_tableau  text-center"><a href="index.php?page=supprimer_article_pannier&id_article=<?php echo $data[$i]['id_article'] ?>&quantite=<?php echo $data[$i]['quantite'] ?>"><span class="glyphicon glyphicon-trash"></a></td>                   
                             </tr>
