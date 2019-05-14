@@ -1,5 +1,4 @@
 
-
 <?php
 $art = new Article_dao($cnx);
 $pannier = new Pannier_dao($cnx);
@@ -58,8 +57,6 @@ try {
     for ($x = 0; $x < count($description); $x++) {
         echo '<p>' . $description[$x] . '</p><br\>';
     }
-    ?> 
-    <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (isset($_POST['ajouter'])) {
             if (!empty($_POST['quantite'])) {
@@ -80,15 +77,13 @@ try {
                         </script>
                         <?php
                     } else {
-                        echo ' echec modification';
+                        // echo ' echec modification';
                         ?>
                         <script>
-                            notif("<p>modification effectuer</p>")
+                            notif("<p>echec de modification</p>")
                         </script><?php
                     }
-
                     $data_0 = $pannier->recherche_user($id_user);
-
                     if (count($data_0) == 0) {
                         $res = $pannier->ajouter_au_pannier($id_user);
 
@@ -142,7 +137,7 @@ try {
                     </script><?php
                 }
             } else {
-           //     echo 'veiller vous connecter a votre session';
+                //     echo 'veiller vous connecter a votre session';
                 ?>
                 <script>
                     notif("<p>veiller vous connecter a votre session</p>")
@@ -150,40 +145,9 @@ try {
             }
         }
     }
-    ?>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = x.length;
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-white";
-        }
-    </script><?php
+    if (file_exists('./admin/lib/php/slides_images.php')) {
+        include ('./admin/lib/php/slides_images.php');
+    }
 } catch (PDOException $e) {
     echo "<br>" . $e->getMessage();
 }

@@ -2,7 +2,6 @@
 try {
     $user_dao = new Utilisateur_dao($cnx);
     $data = $user_dao->liste_utilisteur();
-
     echo '<div class="container-fluid">';
     echo '<table class = "table  table-bordered" class="colonne_tableau">';
     echo '<thead>';

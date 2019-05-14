@@ -2,7 +2,6 @@
 include ('./admin/lib/php/adm_liste_include.php');
 $cnx = Connexion::getInstance($dsn, $user, $pass);
 session_start();
-
 if (file_exists('./admin/lib/php/cookie.php')) {
     include ('./admin/lib/php/cookie.php');
 }
@@ -50,5 +49,9 @@ if (file_exists('./admin/lib/php/cookie.php')) {
             ?> 
 
         </div>
+        <footer>
+            <div class="container text-center" id="footer">
+            </div>
+        </footer>
     </body>
 </html>

@@ -2,8 +2,9 @@
 <?php
 $liste = new Article_dao($cnx);
 $data = $liste->liste_vetement($_GET['genre']);
+$img = new Images($cnx);
 ?>
-<div class="menu_gauche align-self-start ">
+<div class="menu_gauche align-self-start  ">
 
 </div>
 <div class="contenu row justify-content-start">
@@ -12,12 +13,7 @@ $data = $liste->liste_vetement($_GET['genre']);
         ?>
         <?php
         for ($i = 0; $i < count($data); $i++) {
-            $query = "select * from images where id_article=:id_article";
-            $resultset = $cnx->prepare($query);
-            // $_SESSION['id_hotel'] = $data_hotel[$i]['id_hotel'];
-            $resultset->bindParam(':id_article', $data[$i]['id_article'], PDO::PARAM_INT);
-            $resultset->execute();
-            $data_images = $resultset->fetchAll();
+            $data_images = $img->selection_images($data[$i]['id_article']);
             ?>
             <div class="thumbnail images_galerie">
                 <a href="index.php?page=detail_article&id_article=<?php echo $data[$i]['id_article']; ?>" id="lien_detail_hotel">

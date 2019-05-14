@@ -43,7 +43,7 @@ try {
                             <?php
                         }
                     }
-                }
+                } 
                 fclose($mesCommandes);
                 ?>
             </tbody>

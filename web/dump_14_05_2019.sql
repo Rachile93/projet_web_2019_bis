@@ -5,7 +5,7 @@
 -- Dumped from database version 10.1
 -- Dumped by pg_dump version 10.4
 
--- Started on 2019-05-13 15:40:57
+-- Started on 2019-05-14 19:54:28
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -203,7 +203,48 @@ INSERT INTO public.administrateur VALUES (1, 'kuete', 'bernard', 'bernard@yahoo.
 -- Data for Name: article; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.article VALUES (12, 'Chemise lyocell et coton', 6, 8, 'noir', 'Descriptif--
+INSERT INTO public.article VALUES (13, 'Chemise slim motif jacquard', 11, 12, 'bleu', 'Le jacquard pour un micro motif original, avec cette chemise--
+ajustée à associer à vos jeans et chinos préférés.--
+
+- Chemise en pur coton--
+- Slim fit / coupe ajustée--
+- Manches longues à poignets 2 boutons--
+- Col pointes boutonnées--
+- Ouverture boutonnée--
+- Micro motif en jacquard all-over--
+- Plis d''aisance au dos--
+- Base arrondie--
+- Longueur dos : 76 cm--
+
+- Notre mannequin porte une taille M et mesure 1m87--
+', '2019-03-31', 'chemise', 'homme', 'xl');
+INSERT INTO public.article VALUES (14, 'Sweat à capuche fourrée', 14, 13, 'blue marine chiné', 'Le petit plus de ce basique confortable et indémodable : une --capuche fourrée façon sherpa pour être bien protégé du froid.--
+
+- Sweat en molleton gratté--
+- Manches longues--
+- Col montant à capuche fourrée en sherpa + lien de serrage sous --tunnel--
+- Ouverture zippée--
+- Poche kangourou devant--
+- Finition bord-côte à la base et aux poignets--
+- Longueur dos : 70 cm--
+
+- Notre mannequin porte une taille M et mesure 1m87--
+
+Référence: WK306--
+', '2019-03-31', 'sweat', 'homme', 'L');
+INSERT INTO public.article VALUES (11, 'T-shirt ''Mickey'' de ''Disney''', 9.00, 0, 'bleu', '--Retombons en enfance avec ce t-shirt  --''Disney'' ! Pour un look décalé on le --porte avec un jean, une paire de --baskets et un perfecto !
+
+-- - Col rond
+-- - Manches courtes
+-- - Revers aux manches
+-- - Imprimé ''Mickey'' à l''avant
+-- - Longueur dos : 62 cm
+
+--Notre mannequin porte une taille M et --mesure 1m75
+
+--Référence: WL723
+', '2019-02-20', 't-shirt', 'femme', 'M');
+INSERT INTO public.article VALUES (12, 'Chemise lyocell et coton', 6, 4, 'noir', 'Descriptif--
 
 Une nouveauté qui ne passera pas inaperçue grâce à sa matière--
 légère, douce et soyeuse.--
@@ -222,19 +263,7 @@ légère, douce et soyeuse.--
 - Longueur 76 cm environ--
 
 Notre mannequin porte une taille M et mesure 1m89--', '2019-03-31', 'chemise', 'homme', 'M');
-INSERT INTO public.article VALUES (11, 'T-shirt ''Mickey'' de ''Disney''', 9.00, 1, 'bleu', '--Retombons en enfance avec ce t-shirt  --''Disney'' ! Pour un look décalé on le --porte avec un jean, une paire de --baskets et un perfecto !
-
--- - Col rond
--- - Manches courtes
--- - Revers aux manches
--- - Imprimé ''Mickey'' à l''avant
--- - Longueur dos : 62 cm
-
---Notre mannequin porte une taille M et --mesure 1m75
-
---Référence: WL723
-', '2019-02-20', 't-shirt', 'femme', 'M');
-INSERT INTO public.article VALUES (7, 'T-shirt avec message en coton bio', 6.00, 7, 'rose', '--On est fan de ces t-shirts aux messages --''feel good'' que l''on porte en toutes --occasions !
+INSERT INTO public.article VALUES (7, 'T-shirt avec message en coton bio', 6.00, 6, 'rose', '--On est fan de ces t-shirts aux messages --''feel good'' que l''on porte en toutes --occasions !
 
 -- - T-shirt col rond
 -- - Pur coton bio
@@ -245,35 +274,22 @@ INSERT INTO public.article VALUES (7, 'T-shirt avec message en coton bio', 6.00,
 -- Notre mannequin porte une taille M et --mesure 1m75
 
 --Référence: WM871', '2019-02-19', 't-shirt', 'femme', 'M');
-INSERT INTO public.article VALUES (13, 'Chemise slim motif jacquard', 11, 12, 'bleu', 'Le jacquard pour un micro motif original, avec cette chemise--
-ajustée à associer à vos jeans et chinos préférés.--
+INSERT INTO public.article VALUES (20, 'robe-t-shirt-base-evasee', 7, 30, 'noir', '
+Descriptif--
 
-- Chemise en pur coton--
-- Slim fit / coupe ajustée--
-- Manches longues à poignets 2 boutons--
-- Col pointes boutonnées--
-- Ouverture boutonnée--
-- Micro motif en jacquard all-over--
-- Plis d''aisance au dos--
-- Base arrondie--
-- Longueur dos : 76 cm--
+La petite robe noir classique à porter sans modération !--
 
-- Notre mannequin porte une taille M et mesure 1m87--
-', '2019-03-31', 'chemise', 'homme', 'xl');
-INSERT INTO public.article VALUES (14, 'Sweat à capuche fourrée', 14, 15, 'blue marine chiné', 'Le petit plus de ce basique confortable et indémodable : une --capuche fourrée façon sherpa pour être bien protégé du froid.--
+- Robe tee-shirt--
+- En coton stretch--
+- Manches courtes--
+- Col rond--
+- Base évasée--
+- Longueur dos : 83 cm--
 
-- Sweat en molleton gratté--
-- Manches longues--
-- Col montant à capuche fourrée en sherpa + lien de serrage sous --tunnel--
-- Ouverture zippée--
-- Poche kangourou devant--
-- Finition bord-côte à la base et aux poignets--
-- Longueur dos : 70 cm--
+- Notre mannequin porte une taille M et mesure 1m74--
 
-- Notre mannequin porte une taille M et mesure 1m87--
-
-Référence: WK306--
-', '2019-03-31', 'sweat', 'homme', 'L');
+Référence: WU625--
+', '2019-05-14', 'robe', 'femme', 'L');
 INSERT INTO public.article VALUES (17, ' Pantalon skinny tapered', 10, 15, 'beige', 'Confortable et tendance par sa forme tapered et ses bas de --jambes effilochés, le pantalon en twill se renouvelle pour des --looks casual plus branchés.--
 
 - Pantalon tapered, ample au niveau du bassin et des cuisses avec --une fourche légèrement descendue--
@@ -291,6 +307,46 @@ Notre mannequin porte une taille 42 et mesure 1m89
 
 Référence: WM735--
 ', '2019-04-01', 'pantalon', 'homme', 'L');
+INSERT INTO public.article VALUES (18, 'short-van-gestreept-denim-blauw-dames', 5, 10, 'bleu', '
+Descriptif--
+
+La mode est aux boutons fantaisie !--
+
+- Short en denim--
+- En coton stretch--
+- Taille haute--
+- Ouverture par boutons apparents--
+- 2 poches devant + 1 ticket + 2 poches plaquées au dos--
+- Passants pour ceinture--
+- Taille ajustable par élastique à bouton--
+- Fentes à la base de chaque côté--
+- Longueur entrejambe : 12 cm--
+- Largeur bas de jambe : 34 cm--
+
+- Notre mannequin porte une taille 52 et mesure 1m80--
+
+Référence: WP458--
+', '2019-05-08', 'short', 'femme', 'M');
+INSERT INTO public.article VALUES (19, ' T-shirt regular coton bio maille bouclette', 6, 30, 'bleu gris', '
+Descriptif--
+
+Avec cette nouvelle ligne, Kiabi s’engage avec style en développant sa gamme « écoconception ».--
+Les essentiels de notre garde-robe sont non seulement réinventés et sublimés, mais aussi et surtout inscrits au cœur des enjeux environnementaux textiles.--
+Moins de produits chimique et d’eau pour la culture du coton : un environnement préservé et des agriculteurs en meilleure santé pour un coton toujours aussi beau.--
+Vous aussi…--
+En lavant vos vêtements à 30°c ou à froid, vous continuerez avec nous cette démarche !--
+
+- Tee-shirt en maille jersey pur coton biologique--
+- Regular fit / coupe droite--
+- Manches courtes--
+- Col rond--
+- Message maille bouclette devant--
+- Longueur dos : 69 cm--
+
+- Notre mannequin porte une taille M et mesure 1m88--
+
+Référence: WQ451--
+', '2019-05-14', 'T-shirt', 'homme', 'L');
 
 
 --
@@ -299,9 +355,9 @@ Référence: WM735--
 -- Data for Name: composer; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+INSERT INTO public.composer VALUES (31, 11, 1);
+INSERT INTO public.composer VALUES (24, 14, 1);
 INSERT INTO public.composer VALUES (24, 12, 1);
-INSERT INTO public.composer VALUES (24, 7, 1);
-INSERT INTO public.composer VALUES (29, 13, 1);
 
 
 --
@@ -345,6 +401,21 @@ INSERT INTO public.images VALUES (52, 17, '.\images\pantalon-skinny-tapered-marr
 INSERT INTO public.images VALUES (53, 17, '.\images\pantalon-skinny-tapered-marron-gris-homme-wm735_3_frf4.jpg');
 INSERT INTO public.images VALUES (54, 17, '.\images\pantalon-skinny-tapered-marron-gris-homme-wm735_3_frf5.jpg');
 INSERT INTO public.images VALUES (55, 17, '.\images\pantalon-skinny-tapered-marron-gris-homme-wm735_3_frf6.jpg');
+INSERT INTO public.images VALUES (56, 18, '.\images\short-van-gestreept-denim-blauw-dames-size-wp458_2_frf1.jpg');
+INSERT INTO public.images VALUES (57, 18, '.\images\short-van-gestreept-denim-blauw-dames-size-wp458_2_frf2.jpg');
+INSERT INTO public.images VALUES (58, 18, '.\images\short-van-gestreept-denim-blauw-dames-size-wp458_2_frf3.jpg');
+INSERT INTO public.images VALUES (59, 18, '.\images\short-van-gestreept-denim-blauw-dames-size-wp458_2_frf4.jpg');
+INSERT INTO public.images VALUES (60, 18, '.\images\short-van-gestreept-denim-blauw-dames-size-wp458_2_frf5.jpg');
+INSERT INTO public.images VALUES (61, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_fr1.jpg');
+INSERT INTO public.images VALUES (62, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_frf2.jpg');
+INSERT INTO public.images VALUES (63, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_frf3.jpg');
+INSERT INTO public.images VALUES (64, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_frf4.jpg');
+INSERT INTO public.images VALUES (65, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_frf5.jpg');
+INSERT INTO public.images VALUES (66, 19, '.\images\t-shirt-regular-coton-bio-maille-bouclette-bleu-gris-homme-wq451_1_frf6.jpg');
+INSERT INTO public.images VALUES (67, 20, '.\images\robe-t-shirt-base-evasee-noir-femme-wu625_1_frf1.jpg');
+INSERT INTO public.images VALUES (68, 20, '.\images\robe-t-shirt-base-evasee-noir-femme-wu625_1_frf2.jpg');
+INSERT INTO public.images VALUES (69, 20, '.\images\robe-t-shirt-base-evasee-noir-femme-wu625_1_frf6.jpg');
+INSERT INTO public.images VALUES (70, 20, '.\images\robe-t-shirt-base-evasee-noir-femme-wu625_1_frm.jpg');
 
 
 --
@@ -354,8 +425,7 @@ INSERT INTO public.images VALUES (55, 17, '.\images\pantalon-skinny-tapered-marr
 --
 
 INSERT INTO public.pannier VALUES (24, 32);
-INSERT INTO public.pannier VALUES (28, 41);
-INSERT INTO public.pannier VALUES (29, 43);
+INSERT INTO public.pannier VALUES (31, 44);
 
 
 --
@@ -365,9 +435,7 @@ INSERT INTO public.pannier VALUES (29, 43);
 --
 
 INSERT INTO public.utilisateur VALUES (32, 'djeutsop', 'rachile', 'drachilearmel@yahoo.com', '2019-04-19', '$2y$10$hu6DNW9KA16.fcw1IQt6huUWEx6D3WeJWK16SX2cRAIMDPa0GUdAe', 'madame                          ');
-INSERT INTO public.utilisateur VALUES (41, 'feupe', 'sylviane', 'feupe@yahoo.com', '2019-05-15', '$2y$10$wK6DGOwOQh0yl9qZes6zheYF141HJGxIpDQw.Qoq1zh9tBfA4YCua', 'madame                          ');
-INSERT INTO public.utilisateur VALUES (42, 'darte', 'armel', 'armel@yahoo.com', '2019-05-08', '$2y$10$M6/juV8euy17laTMOGk2GeqOztBMmUo6jhwU.z4/HAckEAA8gqNAK', 'madame                          ');
-INSERT INTO public.utilisateur VALUES (43, 'tidang', 'olive', 'olive@yahoo.com', '2019-05-14', '$2y$10$iyrahrS/dyxIX7AYZkeuo.6REls3hNFL8hZPq3GbS7gWIAi7vN1wW', 'monsieur                        ');
+INSERT INTO public.utilisateur VALUES (44, 'darte', 'armel', 'armel@yahoo.com', '2019-05-16', '$2y$10$HYqw649jdGHqwUH1MHxIuekPawvHa6JRAyq.N8ck1l1A/yqWJl5v6', 'madame                          ');
 
 
 --
@@ -385,7 +453,7 @@ SELECT pg_catalog.setval('public.id_admin_seq', 1, false);
 -- Name: id_article_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.id_article_seq', 17, true);
+SELECT pg_catalog.setval('public.id_article_seq', 20, true);
 
 
 --
@@ -394,7 +462,7 @@ SELECT pg_catalog.setval('public.id_article_seq', 17, true);
 -- Name: id_img_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.id_img_seq', 55, true);
+SELECT pg_catalog.setval('public.id_img_seq', 70, true);
 
 
 --
@@ -403,7 +471,7 @@ SELECT pg_catalog.setval('public.id_img_seq', 55, true);
 -- Name: id_pannier_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.id_pannier_seq', 29, true);
+SELECT pg_catalog.setval('public.id_pannier_seq', 32, true);
 
 
 --
@@ -412,7 +480,7 @@ SELECT pg_catalog.setval('public.id_pannier_seq', 29, true);
 -- Name: id_user_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.id_user_seq', 43, true);
+SELECT pg_catalog.setval('public.id_user_seq', 45, true);
 
 
 --
@@ -546,7 +614,7 @@ ALTER TABLE ONLY public.pannier
     ADD CONSTRAINT fk_pannier_utilisateur FOREIGN KEY (id_user) REFERENCES public.utilisateur(id_user);
 
 
--- Completed on 2019-05-13 15:40:58
+-- Completed on 2019-05-14 19:54:28
 
 --
 -- PostgreSQL database dump complete

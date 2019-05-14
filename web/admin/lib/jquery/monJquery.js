@@ -10,8 +10,8 @@ function mise_en_gras_du_texte(str) {
     });
 }
 function notif(str) {
-    $(document).ready(function () {      
-        $('.notification').append(str); 
+    $(document).ready(function () {
+        $('.notification').append(str);
     });
 }
 function creation_Link_admin() {
@@ -30,6 +30,7 @@ function creation_session_user(nom, prenom) {
         $("#creer_compte").remove();
     });
 }
+
 function test_validation() {
     (function () {
         'use strict';
